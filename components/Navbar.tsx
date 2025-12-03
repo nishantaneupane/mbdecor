@@ -20,11 +20,11 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-primary shadow-md">
-      <div className="container">
-        <div className="flex items-center justify-between py-4">
+    <nav className="sticky top-0 z-50 bg-primary shadow-md h-20">
+      <div className="container h-full">
+        <div className="flex items-center justify-center h-full relative">
           {/* Logo */}
-          <Link href="/" className="flex items-center pr-8">
+          <Link href="/" className="absolute left-0 flex items-center px-4 h-full">
             <Image
               src="/logo/whitelogo.png"
               alt="MB Decor"
@@ -34,7 +34,7 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* Desktop Menu */}
+          {/* Desktop Menu - Centered */}
           <div className="hidden lg:flex items-center gap-8">
             <Link
               href="/"
@@ -123,7 +123,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden flex flex-col gap-1.5 p-2"
+            className="lg:hidden absolute right-0 flex flex-col gap-1.5 p-2"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
