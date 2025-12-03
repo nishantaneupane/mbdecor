@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: CategoryPageProps) {
   }
 
   return {
-    title: `${category.name} - MB Decor`,
+    title: `${category.name} - MD Decor`,
     description: category.description,
   };
 }

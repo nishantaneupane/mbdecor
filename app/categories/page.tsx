@@ -2,7 +2,7 @@ import { getAllCategories } from "@/lib/data";
 import CategoryCard from "@/components/CategoryCard";
 
 export const metadata = {
-  title: "Categories - MB Decor",
+  title: "Categories - MD Decor",
   description: "Browse all our decoration categories",
 };
 

@@ -30,7 +30,7 @@ export default function Navbar() {
           >
             <Image
               src="/logo/whitelogo.png"
-              alt="MB Decor"
+              alt="MD Decor"
               width={80}
               height={27}
               priority
@@ -46,12 +46,21 @@ export default function Navbar() {
               Home
             </Link>
 
+            {/* Banquet Link */}
+            <Link
+              href="/categories/banquet-hall"
+              className="text-white hover:text-white/80 transition-colors font-medium"
+            >
+              Banquet
+            </Link>
+
             {/* Categories Dropdown */}
             {categories
               .filter(
                 (category) =>
                   category.slug !== "weaning-ceremony" &&
-                  category.slug !== "gunyo-cholo"
+                  category.slug !== "gunyo-cholo" &&
+                  category.slug !== "banquet-hall"
               )
               .map((category) => (
                 <div
@@ -160,57 +169,68 @@ export default function Navbar() {
                 Home
               </Link>
 
+              {/* Banquet Link */}
+              <Link
+                href="/categories/banquet-hall"
+                className="text-white hover:text-white/80 transition-colors font-medium"
+                onClick={() => setIsOpen(false)}
+              >
+                Banquet
+              </Link>
+
               {/* Mobile Categories */}
-              {categories.map((category) => (
-                <div key={category.id}>
-                  <button
-                    onClick={() => toggleDropdown(`mobile-${category.slug}`)}
-                    className="w-full text-left text-white hover:text-white/80 transition-colors font-medium flex items-center justify-between"
-                  >
-                    {category.name}
-                    <svg
-                      className={`w-4 h-4 transition-transform ${
-                        openDropdown === `mobile-${category.slug}`
-                          ? "rotate-180"
-                          : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+              {categories
+                .filter((category) => category.slug !== "banquet-hall")
+                .map((category) => (
+                  <div key={category.id}>
+                    <button
+                      onClick={() => toggleDropdown(`mobile-${category.slug}`)}
+                      className="w-full text-left text-white hover:text-white/80 transition-colors font-medium flex items-center justify-between"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </button>
-                  {openDropdown === `mobile-${category.slug}` && (
-                    <div className="ml-4 mt-2 flex flex-col gap-2">
-                      {getProductsByCategory(category.slug)
-                        .slice(0, 5)
-                        .map((product) => (
-                          <Link
-                            key={product.id}
-                            href={`/products/${product.slug}`}
-                            className="text-sm text-white hover:text-white/80"
-                            onClick={() => setIsOpen(false)}
-                          >
-                            {product.name}
-                          </Link>
-                        ))}
-                      <Link
-                        href={`/categories/${category.slug}`}
-                        className="text-sm text-white hover:text-white/80 font-semibold"
-                        onClick={() => setIsOpen(false)}
+                      {category.name}
+                      <svg
+                        className={`w-4 h-4 transition-transform ${
+                          openDropdown === `mobile-${category.slug}`
+                            ? "rotate-180"
+                            : ""
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
                       >
-                        View All →
-                      </Link>
-                    </div>
-                  )}
-                </div>
-              ))}
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+                    {openDropdown === `mobile-${category.slug}` && (
+                      <div className="ml-4 mt-2 flex flex-col gap-2">
+                        {getProductsByCategory(category.slug)
+                          .slice(0, 5)
+                          .map((product) => (
+                            <Link
+                              key={product.id}
+                              href={`/products/${product.slug}`}
+                              className="text-sm text-white hover:text-white/80"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {product.name}
+                            </Link>
+                          ))}
+                        <Link
+                          href={`/categories/${category.slug}`}
+                          className="text-sm text-white hover:text-white/80 font-semibold"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          View All →
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                ))}
 
               <Link
                 href="/about"

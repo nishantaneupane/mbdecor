@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: ProductPageProps) {
   }
 
   return {
-    title: `${product.name} - MB Decor`,
+    title: `${product.name} - MD Decor`,
     description: product.description,
   };
 }

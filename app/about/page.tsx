@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "About Us - MB Decor",
-  description: "Learn more about MB Decor and our decoration services",
+  title: "About Us - MD Decor",
+  description: "Learn more about MD Decor and our decoration services",
 };
 
 export default function AboutPage() {
@@ -11,7 +11,7 @@ export default function AboutPage() {
           {/* Page Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              About MB Decor
+              About MD Decor
             </h1>
             <p className="text-gray-600 text-lg">
               Your trusted partner in creating memorable moments
@@ -25,8 +25,8 @@ export default function AboutPage() {
               <h2 className="text-2xl font-bold text-foreground mb-4">
                 Who We Are
               </h2>
-              <p className="text-gray-700 leading-relaxed">
-                MB Decor is a premier decoration service provider specializing
+              <p className="text-gray-700 leading-relaxed mb-4">
+                MD Decor is a premier decoration service provider specializing
                 in transforming ordinary spaces into extraordinary experiences.
                 With years of expertise in the industry, we have become the
                 go-to choice for weddings, corporate events, birthday parties,

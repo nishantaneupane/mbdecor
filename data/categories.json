@@ -47,5 +47,33 @@
     "slug": "gunyo-cholo",
     "description": "Traditional coming-of-age ceremony decorations",
     "image": "/categories/gunyocholo.png"
+  },
+  {
+    "id": 8,
+    "name": "Banquet Hall",
+    "slug": "banquet-hall",
+    "description": "Complete decoration services for banquet halls and event venues",
+    "image": "/categories/wedding.png"
+  },
+  {
+    "id": 9,
+    "name": "Dance Choreography",
+    "slug": "dance-choreography",
+    "description": "Stage and event decorations for dance performances",
+    "image": "/categories/birthday.png"
+  },
+  {
+    "id": 10,
+    "name": "Anniversary",
+    "slug": "anniversary",
+    "description": "Romantic and elegant anniversary celebration decorations",
+    "image": "/categories/wedding.png"
+  },
+  {
+    "id": 11,
+    "name": "Dai Chiura",
+    "slug": "dai-chiura",
+    "description": "Traditional Dai Chiura ceremony decorations",
+    "image": "/categories/haldi.png"
   }
 ]

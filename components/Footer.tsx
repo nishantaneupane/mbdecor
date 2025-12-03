@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold text-primary mb-4">MB Decor</h3>
+            <h3 className="text-xl font-bold text-primary mb-4">MD Decor</h3>
             <p className="text-gray-600 mb-2">
               Your trusted partner for premium decoration services
             </p>
@@ -53,7 +53,7 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-gray-300">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-600 text-sm">
-              © {new Date().getFullYear()} MB Decor. All rights reserved.
+              © {new Date().getFullYear()} MD Decor. All rights reserved.
             </p>
             <div className="flex gap-4">
               <a

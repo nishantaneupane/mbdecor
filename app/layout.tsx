@@ -17,7 +17,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "MB Decor - Premium Decoration Services",
+  title: "MD Decor - Premium Decoration Services",
   description:
     "Explore our wide range of decoration products and services for weddings, events, and more.",
 };

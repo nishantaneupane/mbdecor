@@ -978,5 +978,565 @@
       "Decorative backdrop",
       "Photo-ready setup"
     ]
+  },
+  {
+    "id": 71,
+    "category": "banquet-hall",
+    "name": "Grand Hall Decoration Package",
+    "slug": "grand-hall-decoration-package",
+    "image": "/products/Chola-Traditional-Mandap-Decor_Confluence-Mahabalipuram.webp",
+    "description": "Professional banquet hall decoration service - 1",
+    "specs": [
+      "Premium quality",
+      "Full setup included",
+      "Professional team",
+      "Customizable design"
+    ]
+  },
+  {
+    "id": 72,
+    "category": "banquet-hall",
+    "name": "Ceiling Draping Setup",
+    "slug": "ceiling-draping-setup",
+    "image": "/products/light.jpg",
+    "description": "Professional banquet hall decoration service - 2",
+    "specs": [
+      "Premium quality",
+      "Full setup included",
+      "Professional team",
+      "Customizable design"
+    ]
+  },
+  {
+    "id": 73,
+    "category": "banquet-hall",
+    "name": "Stage Backdrop Design",
+    "slug": "stage-backdrop-design",
+    "image": "/products/Floral_Arch_Mehndi_Stage_with_Fairy_Lights.webp",
+    "description": "Professional banquet hall decoration service - 3",
+    "specs": [
+      "Premium quality",
+      "Full setup included",
+      "Professional team",
+      "Customizable design"
+    ]
+  },
+  {
+    "id": 74,
+    "category": "banquet-hall",
+    "name": "LED Light Arrangements",
+    "slug": "led-light-arrangements",
+    "image": "/products/0ed0605336d45fce0679e1b9c43de865.jpg",
+    "description": "Professional banquet hall decoration service - 4",
+    "specs": [
+      "Premium quality",
+      "Full setup included",
+      "Professional team",
+      "Customizable design"
+    ]
+  },
+  {
+    "id": 75,
+    "category": "banquet-hall",
+    "name": "Table Setting Package",
+    "slug": "table-setting-package",
+    "image": "/products/Chola-Traditional-Mandap-Decor_Confluence-Mahabalipuram.webp",
+    "description": "Professional banquet hall decoration service - 5",
+    "specs": [
+      "Premium quality",
+      "Full setup included",
+      "Professional team",
+      "Customizable design"
+    ]
+  },
+  {
+    "id": 76,
+    "category": "banquet-hall",
+    "name": "Entrance Gate Decoration",
+    "slug": "entrance-gate-decoration",
+    "image": "/products/light.jpg",
+    "description": "Professional banquet hall decoration service - 6",
+    "specs": [
+      "Premium quality",
+      "Full setup included",
+      "Professional team",
+      "Customizable design"
+    ]
+  },
+  {
+    "id": 77,
+    "category": "banquet-hall",
+    "name": "Floral Column Decorations",
+    "slug": "floral-column-decorations",
+    "image": "/products/Floral_Arch_Mehndi_Stage_with_Fairy_Lights.webp",
+    "description": "Professional banquet hall decoration service - 7",
+    "specs": [
+      "Premium quality",
+      "Full setup included",
+      "Professional team",
+      "Customizable design"
+    ]
+  },
+  {
+    "id": 78,
+    "category": "banquet-hall",
+    "name": "Dance Floor Lighting",
+    "slug": "dance-floor-lighting",
+    "image": "/products/0ed0605336d45fce0679e1b9c43de865.jpg",
+    "description": "Professional banquet hall decoration service - 8",
+    "specs": [
+      "Premium quality",
+      "Full setup included",
+      "Professional team",
+      "Customizable design"
+    ]
+  },
+  {
+    "id": 79,
+    "category": "banquet-hall",
+    "name": "VIP Seating Arrangement",
+    "slug": "vip-seating-arrangement",
+    "image": "/products/Chola-Traditional-Mandap-Decor_Confluence-Mahabalipuram.webp",
+    "description": "Professional banquet hall decoration service - 9",
+    "specs": [
+      "Premium quality",
+      "Full setup included",
+      "Professional team",
+      "Customizable design"
+    ]
+  },
+  {
+    "id": 80,
+    "category": "banquet-hall",
+    "name": "Photo Booth Setup",
+    "slug": "photo-booth-setup",
+    "image": "/products/light.jpg",
+    "description": "Professional banquet hall decoration service - 10",
+    "specs": [
+      "Premium quality",
+      "Full setup included",
+      "Professional team",
+      "Customizable design"
+    ]
+  },
+  {
+    "id": 81,
+    "category": "dance-choreography",
+    "name": "Stage Lighting Setup",
+    "slug": "stage-lighting-setup",
+    "image": "/products/light.jpg",
+    "description": "Dance event and performance decoration - 1",
+    "specs": [
+      "Stage compatible",
+      "Quick setup",
+      "Professional grade",
+      "Lighting included"
+    ]
+  },
+  {
+    "id": 82,
+    "category": "dance-choreography",
+    "name": "Performance Backdrop",
+    "slug": "performance-backdrop",
+    "image": "/products/birthdaydecor.jpg",
+    "description": "Dance event and performance decoration - 2",
+    "specs": [
+      "Stage compatible",
+      "Quick setup",
+      "Professional grade",
+      "Lighting included"
+    ]
+  },
+  {
+    "id": 83,
+    "category": "dance-choreography",
+    "name": "LED Stage Panels",
+    "slug": "led-stage-panels",
+    "image": "/products/ballon.jpg",
+    "description": "Dance event and performance decoration - 3",
+    "specs": [
+      "Stage compatible",
+      "Quick setup",
+      "Professional grade",
+      "Lighting included"
+    ]
+  },
+  {
+    "id": 84,
+    "category": "dance-choreography",
+    "name": "Sound System Decoration",
+    "slug": "sound-system-decoration",
+    "image": "/products/5a5646e8f7ac4f02cb7e2b105f081271.jpg",
+    "description": "Dance event and performance decoration - 4",
+    "specs": [
+      "Stage compatible",
+      "Quick setup",
+      "Professional grade",
+      "Lighting included"
+    ]
+  },
+  {
+    "id": 85,
+    "category": "dance-choreography",
+    "name": "Dancer Entry Gate",
+    "slug": "dancer-entry-gate",
+    "image": "/products/light.jpg",
+    "description": "Dance event and performance decoration - 5",
+    "specs": [
+      "Stage compatible",
+      "Quick setup",
+      "Professional grade",
+      "Lighting included"
+    ]
+  },
+  {
+    "id": 86,
+    "category": "dance-choreography",
+    "name": "Stage Floor Design",
+    "slug": "stage-floor-design",
+    "image": "/products/birthdaydecor.jpg",
+    "description": "Dance event and performance decoration - 6",
+    "specs": [
+      "Stage compatible",
+      "Quick setup",
+      "Professional grade",
+      "Lighting included"
+    ]
+  },
+  {
+    "id": 87,
+    "category": "dance-choreography",
+    "name": "Audience Seating Decor",
+    "slug": "audience-seating-decor",
+    "image": "/products/ballon.jpg",
+    "description": "Dance event and performance decoration - 7",
+    "specs": [
+      "Stage compatible",
+      "Quick setup",
+      "Professional grade",
+      "Lighting included"
+    ]
+  },
+  {
+    "id": 88,
+    "category": "dance-choreography",
+    "name": "Trophy Display Stand",
+    "slug": "trophy-display-stand",
+    "image": "/products/5a5646e8f7ac4f02cb7e2b105f081271.jpg",
+    "description": "Dance event and performance decoration - 8",
+    "specs": [
+      "Stage compatible",
+      "Quick setup",
+      "Professional grade",
+      "Lighting included"
+    ]
+  },
+  {
+    "id": 89,
+    "category": "dance-choreography",
+    "name": "Team Banner Setup",
+    "slug": "team-banner-setup",
+    "image": "/products/light.jpg",
+    "description": "Dance event and performance decoration - 9",
+    "specs": [
+      "Stage compatible",
+      "Quick setup",
+      "Professional grade",
+      "Lighting included"
+    ]
+  },
+  {
+    "id": 90,
+    "category": "dance-choreography",
+    "name": "Award Ceremony Decoration",
+    "slug": "award-ceremony-decoration",
+    "image": "/products/birthdaydecor.jpg",
+    "description": "Dance event and performance decoration - 10",
+    "specs": [
+      "Stage compatible",
+      "Quick setup",
+      "Professional grade",
+      "Lighting included"
+    ]
+  },
+  {
+    "id": 91,
+    "category": "anniversary",
+    "name": "Romantic Candle Setup",
+    "slug": "romantic-candle-setup",
+    "image": "/products/Floral_Arch_Mehndi_Stage_with_Fairy_Lights.webp",
+    "description": "Elegant anniversary celebration decoration - 1",
+    "specs": [
+      "Romantic theme",
+      "Customizable",
+      "Photo-friendly",
+      "Premium materials"
+    ]
+  },
+  {
+    "id": 92,
+    "category": "anniversary",
+    "name": "Photo Wall Decoration",
+    "slug": "photo-wall-decoration",
+    "image": "/products/light.jpg",
+    "description": "Elegant anniversary celebration decoration - 2",
+    "specs": [
+      "Romantic theme",
+      "Customizable",
+      "Photo-friendly",
+      "Premium materials"
+    ]
+  },
+  {
+    "id": 93,
+    "category": "anniversary",
+    "name": "Anniversary Cake Table",
+    "slug": "anniversary-cake-table",
+    "image": "/products/0ed0605336d45fce0679e1b9c43de865.jpg",
+    "description": "Elegant anniversary celebration decoration - 3",
+    "specs": [
+      "Romantic theme",
+      "Customizable",
+      "Photo-friendly",
+      "Premium materials"
+    ]
+  },
+  {
+    "id": 94,
+    "category": "anniversary",
+    "name": "Floral Centerpieces",
+    "slug": "floral-centerpieces",
+    "image": "/products/cake.jpg",
+    "description": "Elegant anniversary celebration decoration - 4",
+    "specs": [
+      "Romantic theme",
+      "Customizable",
+      "Photo-friendly",
+      "Premium materials"
+    ]
+  },
+  {
+    "id": 95,
+    "category": "anniversary",
+    "name": "Memory Lane Display",
+    "slug": "memory-lane-display",
+    "image": "/products/Floral_Arch_Mehndi_Stage_with_Fairy_Lights.webp",
+    "description": "Elegant anniversary celebration decoration - 5",
+    "specs": [
+      "Romantic theme",
+      "Customizable",
+      "Photo-friendly",
+      "Premium materials"
+    ]
+  },
+  {
+    "id": 96,
+    "category": "anniversary",
+    "name": "Couple Seating Decor",
+    "slug": "couple-seating-decor",
+    "image": "/products/light.jpg",
+    "description": "Elegant anniversary celebration decoration - 6",
+    "specs": [
+      "Romantic theme",
+      "Customizable",
+      "Photo-friendly",
+      "Premium materials"
+    ]
+  },
+  {
+    "id": 97,
+    "category": "anniversary",
+    "name": "Balloon Arrangements",
+    "slug": "balloon-arrangements",
+    "image": "/products/0ed0605336d45fce0679e1b9c43de865.jpg",
+    "description": "Elegant anniversary celebration decoration - 7",
+    "specs": [
+      "Romantic theme",
+      "Customizable",
+      "Photo-friendly",
+      "Premium materials"
+    ]
+  },
+  {
+    "id": 98,
+    "category": "anniversary",
+    "name": "String Light Canopy",
+    "slug": "string-light-canopy",
+    "image": "/products/cake.jpg",
+    "description": "Elegant anniversary celebration decoration - 8",
+    "specs": [
+      "Romantic theme",
+      "Customizable",
+      "Photo-friendly",
+      "Premium materials"
+    ]
+  },
+  {
+    "id": 99,
+    "category": "anniversary",
+    "name": "Gift Table Setup",
+    "slug": "gift-table-setup",
+    "image": "/products/Floral_Arch_Mehndi_Stage_with_Fairy_Lights.webp",
+    "description": "Elegant anniversary celebration decoration - 9",
+    "specs": [
+      "Romantic theme",
+      "Customizable",
+      "Photo-friendly",
+      "Premium materials"
+    ]
+  },
+  {
+    "id": 100,
+    "category": "anniversary",
+    "name": "Anniversary Banner",
+    "slug": "anniversary-banner",
+    "image": "/products/light.jpg",
+    "description": "Elegant anniversary celebration decoration - 10",
+    "specs": [
+      "Romantic theme",
+      "Customizable",
+      "Photo-friendly",
+      "Premium materials"
+    ]
+  },
+  {
+    "id": 101,
+    "category": "dai-chiura",
+    "name": "Traditional Dai Setup",
+    "slug": "traditional-dai-setup",
+    "image": "/products/SALE-ON-Indian-Mango-Color-Artificial-Decorative-Marigold-Flower-Garland-Strings-for-Christmas-Wedding-Party-Decoration.jpg",
+    "description": "Traditional Dai Chiura ceremony decoration - 1",
+    "specs": [
+      "Traditional design",
+      "Cultural elements",
+      "Complete setup",
+      "Auspicious colors"
+    ]
+  },
+  {
+    "id": 102,
+    "category": "dai-chiura",
+    "name": "Chiura Display Decoration",
+    "slug": "chiura-display-decoration",
+    "image": "/products/0ed0605336d45fce0679e1b9c43de865.jpg",
+    "description": "Traditional Dai Chiura ceremony decoration - 2",
+    "specs": [
+      "Traditional design",
+      "Cultural elements",
+      "Complete setup",
+      "Auspicious colors"
+    ]
+  },
+  {
+    "id": 103,
+    "category": "dai-chiura",
+    "name": "Ceremony Seating Area",
+    "slug": "ceremony-seating-area",
+    "image": "/products/laaja-homam-hindu-wedding-ceremony-ritual.jpg",
+    "description": "Traditional Dai Chiura ceremony decoration - 3",
+    "specs": [
+      "Traditional design",
+      "Cultural elements",
+      "Complete setup",
+      "Auspicious colors"
+    ]
+  },
+  {
+    "id": 104,
+    "category": "dai-chiura",
+    "name": "Traditional Gate Decor",
+    "slug": "traditional-gate-decor",
+    "image": "/products/SALE-ON-Indian-Mango-Color-Artificial-Decorative-Marigold-Flower-Garland-Strings-for-Christmas-Wedding-Party-Decoration.jpg",
+    "description": "Traditional Dai Chiura ceremony decoration - 4",
+    "specs": [
+      "Traditional design",
+      "Cultural elements",
+      "Complete setup",
+      "Auspicious colors"
+    ]
+  },
+  {
+    "id": 105,
+    "category": "dai-chiura",
+    "name": "Flower Garland Arrangements",
+    "slug": "flower-garland-arrangements",
+    "image": "/products/0ed0605336d45fce0679e1b9c43de865.jpg",
+    "description": "Traditional Dai Chiura ceremony decoration - 5",
+    "specs": [
+      "Traditional design",
+      "Cultural elements",
+      "Complete setup",
+      "Auspicious colors"
+    ]
+  },
+  {
+    "id": 106,
+    "category": "dai-chiura",
+    "name": "Pooja Thali Decoration",
+    "slug": "pooja-thali-decoration",
+    "image": "/products/laaja-homam-hindu-wedding-ceremony-ritual.jpg",
+    "description": "Traditional Dai Chiura ceremony decoration - 6",
+    "specs": [
+      "Traditional design",
+      "Cultural elements",
+      "Complete setup",
+      "Auspicious colors"
+    ]
+  },
+  {
+    "id": 107,
+    "category": "dai-chiura",
+    "name": "Traditional Backdrop",
+    "slug": "traditional-backdrop",
+    "image": "/products/SALE-ON-Indian-Mango-Color-Artificial-Decorative-Marigold-Flower-Garland-Strings-for-Christmas-Wedding-Party-Decoration.jpg",
+    "description": "Traditional Dai Chiura ceremony decoration - 7",
+    "specs": [
+      "Traditional design",
+      "Cultural elements",
+      "Complete setup",
+      "Auspicious colors"
+    ]
+  },
+  {
+    "id": 108,
+    "category": "dai-chiura",
+    "name": "Kalash with Decorations",
+    "slug": "kalash-with-decorations",
+    "image": "/products/0ed0605336d45fce0679e1b9c43de865.jpg",
+    "description": "Traditional Dai Chiura ceremony decoration - 8",
+    "specs": [
+      "Traditional design",
+      "Cultural elements",
+      "Complete setup",
+      "Auspicious colors"
+    ]
+  },
+  {
+    "id": 109,
+    "category": "dai-chiura",
+    "name": "Floor Rangoli Design",
+    "slug": "floor-rangoli-design",
+    "image": "/products/laaja-homam-hindu-wedding-ceremony-ritual.jpg",
+    "description": "Traditional Dai Chiura ceremony decoration - 9",
+    "specs": [
+      "Traditional design",
+      "Cultural elements",
+      "Complete setup",
+      "Auspicious colors"
+    ]
+  },
+  {
+    "id": 110,
+    "category": "dai-chiura",
+    "name": "Guest Seating Setup",
+    "slug": "guest-seating-setup",
+    "image": "/products/SALE-ON-Indian-Mango-Color-Artificial-Decorative-Marigold-Flower-Garland-Strings-for-Christmas-Wedding-Party-Decoration.jpg",
+    "description": "Traditional Dai Chiura ceremony decoration - 10",
+    "specs": [
+      "Traditional design",
+      "Cultural elements",
+      "Complete setup",
+      "Auspicious colors"
+    ]
   }
 ]
