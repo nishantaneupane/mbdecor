@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { getProductBySlug, getCategoryBySlug } from "@/lib/data";
+import { getProductBySlug, getCategoryBySlug, getProductsByCategory } from "@/lib/data";
+import ProductCard from "@/components/ProductCard";
 
 interface ProductPageProps {
   params: Promise<{ slug: string }>;
@@ -32,6 +33,11 @@ export default async function ProductPage({ params }: ProductPageProps) {
   }
 
   const category = getCategoryBySlug(product.category);
+  
+  // Get related products from the same category (excluding current product)
+  const relatedProducts = getProductsByCategory(product.category)
+    .filter(p => p.id !== product.id)
+    .slice(0, 4);
 
   return (
     <div className="py-16">
@@ -110,6 +116,33 @@ export default async function ProductPage({ params }: ProductPageProps) {
             )}
           </div>
         </div>
+
+        {/* Related Products */}
+        {relatedProducts.length > 0 && (
+          <div className="mt-20">
+            <div className="flex items-center justify-between mb-8">
+              <h2 className="text-3xl font-bold text-foreground">
+                Related Products
+              </h2>
+              {category && (
+                <Link
+                  href={`/categories/${category.slug}`}
+                  className="text-primary font-semibold hover:text-primary/80 transition-colors flex items-center gap-2"
+                >
+                  View All in {category.name}
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              )}
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {relatedProducts.map((relatedProduct) => (
+                <ProductCard key={relatedProduct.id} product={relatedProduct} />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -127,6 +127,34 @@ export default function Home() {
             ))}
           </div>
         </div>
+        {/* Call to Action Banner */}
+        <section className="py-16 bg-linear-to-r from-primary/90 to-primary text-white">
+          <div className="container">
+            <div className="text-center max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6">
+                Ready to Transform Your Event?
+              </h2>
+              <p className="text-xl mb-8 text-white/90">
+                Explore our complete collection and find the perfect decorations
+                for your special occasion
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/categories"
+                  className="px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  Browse All Products
+                </Link>
+                <Link
+                  href="/contact"
+                  className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
 
       {/* New Arrivals Section */}
@@ -168,35 +196,6 @@ export default function Home() {
             {newArrivals.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action Banner */}
-      <section className="py-16 bg-linear-to-r from-primary/90 to-primary text-white">
-        <div className="container">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Ready to Transform Your Event?
-            </h2>
-            <p className="text-xl mb-8 text-white/90">
-              Explore our complete collection and find the perfect decorations
-              for your special occasion
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/categories"
-                className="px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors"
-              >
-                Browse All Products
-              </Link>
-              <Link
-                href="/contact"
-                className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
-              >
-                Contact Us
-              </Link>
-            </div>
           </div>
         </div>
       </section>
