@@ -1,7 +1,11 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { getProductBySlug, getCategoryBySlug, getProductsByCategory } from "@/lib/data";
+import {
+  getProductBySlug,
+  getCategoryBySlug,
+  getProductsByCategory,
+} from "@/lib/data";
 import ProductCard from "@/components/ProductCard";
 
 interface ProductPageProps {
@@ -33,10 +37,10 @@ export default async function ProductPage({ params }: ProductPageProps) {
   }
 
   const category = getCategoryBySlug(product.category);
-  
+
   // Get related products from the same category (excluding current product)
   const relatedProducts = getProductsByCategory(product.category)
-    .filter(p => p.id !== product.id)
+    .filter((p) => p.id !== product.id)
     .slice(0, 4);
 
   return (
@@ -130,8 +134,18 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   className="text-primary font-semibold hover:text-primary/80 transition-colors flex items-center gap-2"
                 >
                   View All in {category.name}
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
                   </svg>
                 </Link>
               )}

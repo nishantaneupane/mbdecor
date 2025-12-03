@@ -20,11 +20,14 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-primary shadow-md h-20">
+    <nav className="sticky top-0 z-50 bg-primary shadow-md h-24">
       <div className="container h-full">
         <div className="flex items-center justify-center h-full relative">
           {/* Logo */}
-          <Link href="/" className="absolute left-0 flex items-center px-4 h-full">
+          <Link
+            href="/"
+            className="absolute left-0 flex items-center px-4 h-full"
+          >
             <Image
               src="/logo/whitelogo.png"
               alt="MB Decor"
@@ -147,8 +150,8 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden pb-4 border-t border-white/20 pt-4">
-            <div className="flex flex-col gap-4">
+          <div className="lg:hidden pb-4 border-t border-white/20 pt-4 bg-primary w-screen absolute left-0">
+            <div className="flex flex-col gap-4 px-4">
               <Link
                 href="/"
                 className="text-white hover:text-white/80 transition-colors font-medium"
