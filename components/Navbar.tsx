@@ -3,17 +3,29 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { getAllCategories, getProductsByCategory } from "@/lib/data";
+import { getAllCategories, getProductsByCategory, Product } from "@/lib/data";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [categories, setCategories] = useState<any[]>([]);
+  const [categoryProducts, setCategoryProducts] = useState<Record<string, Product[]>>({});
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    setCategories(getAllCategories());
+    getAllCategories().then(setCategories);
   }, []);
+
+  useEffect(() => {
+    if (openDropdown && categories.length > 0) {
+      const categorySlug = openDropdown.replace('mobile-', '');
+      if (!categoryProducts[categorySlug]) {
+        getProductsByCategory(categorySlug).then(products => {
+          setCategoryProducts(prev => ({ ...prev, [categorySlug]: products.slice(0, 5) }));
+        });
+      }
+    }
+  }, [openDropdown, categories]);
 
   const toggleDropdown = (name: string) => {
     setOpenDropdown(openDropdown === name ? null : name);
@@ -96,16 +108,14 @@ export default function Navbar() {
                         <div className="px-4 py-2 text-sm font-semibold text-foreground">
                           {category.name}
                         </div>
-                        {getProductsByCategory(category.slug)
-                          .slice(0, 5)
-                          .map((product) => (
-                            <div
-                              key={product.id}
-                              className="px-4 py-2 text-sm text-gray-600"
-                            >
-                              {product.name}
-                            </div>
-                          ))}
+                        {categoryProducts[category.slug]?.map((product) => (
+                          <div
+                            key={product.id}
+                            className="px-4 py-2 text-sm text-gray-600"
+                          >
+                            {product.name}
+                          </div>
+                        ))}
                         <Link
                           href={`/categories/${category.slug}`}
                           className="block px-4 py-2 text-sm text-primary hover:bg-primary/5 transition-colors font-semibold mt-2"
@@ -208,16 +218,14 @@ export default function Navbar() {
                     </button>
                     {openDropdown === `mobile-${category.slug}` && (
                       <div className="ml-4 mt-2 flex flex-col gap-2">
-                        {getProductsByCategory(category.slug)
-                          .slice(0, 5)
-                          .map((product) => (
-                            <Link
-                              key={product.id}
-                              href={`/products/${product.slug}`}
-                              className="text-sm text-white hover:text-white/80"
-                              onClick={() => setIsOpen(false)}
-                            >
-                              {product.name}
+                        {categoryProducts[category.slug]?.map((product) => (
+                          <Link
+                            key={product.id}
+                            href={`/products/${product.slug}`}
+                            className="text-sm text-white hover:text-white/80"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {product.name}
                             </Link>
                           ))}
                         <Link

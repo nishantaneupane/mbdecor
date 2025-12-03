@@ -6,8 +6,8 @@ export const metadata = {
   description: "Browse all our decoration categories",
 };
 
-export default function CategoriesPage() {
-  const categories = getAllCategories();
+export default async function CategoriesPage() {
+  const categories = await getAllCategories();
 
   return (
     <div className="py-16">

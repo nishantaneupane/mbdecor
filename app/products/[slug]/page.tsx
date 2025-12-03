@@ -14,7 +14,7 @@ interface ProductPageProps {
 
 export async function generateMetadata({ params }: ProductPageProps) {
   const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = await getProductBySlug(slug);
 
   if (!product) {
     return {
@@ -30,16 +30,17 @@ export async function generateMetadata({ params }: ProductPageProps) {
 
 export default async function ProductPage({ params }: ProductPageProps) {
   const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = await getProductBySlug(slug);
 
   if (!product) {
     notFound();
   }
 
-  const category = getCategoryBySlug(product.category);
+  const category = await getCategoryBySlug(product.category);
 
   // Get related products from the same category (excluding current product)
-  const relatedProducts = getProductsByCategory(product.category)
+  const allRelatedProducts = await getProductsByCategory(product.category);
+  const relatedProducts = allRelatedProducts
     .filter((p) => p.id !== product.id)
     .slice(0, 4);
 

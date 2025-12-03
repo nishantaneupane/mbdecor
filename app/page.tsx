@@ -12,12 +12,12 @@ import PromoBanner from "@/components/PromoBanner";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import Link from "next/link";
 
-export default function Home() {
-  const categories = getAllCategories();
-  const featuredProducts = getFeaturedProducts(4);
-  const trendingProducts = getTrendingProducts(4);
-  const bestSellers = getBestSellers(4);
-  const newArrivals = getNewArrivals(4);
+export default async function Home() {
+  const categories = await getAllCategories();
+  const featuredProducts = await getFeaturedProducts(4);
+  const trendingProducts = await getTrendingProducts(4);
+  const bestSellers = await getBestSellers(4);
+  const newArrivals = await getNewArrivals(4);
 
   return (
     <>
