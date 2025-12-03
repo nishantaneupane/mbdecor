@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Transform Your Special Moments",
+    "subtitle": "Premium Decoration Services for Every Occasion",
+    "image": "/banner/1.jpg",
+    "link": "/categories"
+  },
+  {
+    "id": 2,
+    "title": "Elegant Wedding Decorations",
+    "subtitle": "Make Your Dream Wedding Come True",
+    "image": "/banner/2.jpg",
+    "link": "/categories/wedding"
+  },
+  {
+    "id": 3,
+    "title": "Traditional Ceremony Decorations",
+    "subtitle": "Celebrate Your Culture in Style",
+    "image": "/banner/3.jpg",
+    "link": "/categories/haldi"
+  }
+]

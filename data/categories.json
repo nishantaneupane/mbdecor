@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "Wedding",
+    "slug": "wedding",
+    "description": "Elegant decorations for your special wedding day",
+    "image": "/categories/wedding.png"
+  },
+  {
+    "id": 2,
+    "name": "Birthday",
+    "slug": "birthday",
+    "description": "Fun and colorful birthday party decorations",
+    "image": "/categories/birthday.png"
+  },
+  {
+    "id": 3,
+    "name": "Haldi",
+    "slug": "haldi",
+    "description": "Vibrant and traditional Haldi ceremony decorations",
+    "image": "/categories/haldi.png"
+  },
+  {
+    "id": 4,
+    "name": "Mehndi",
+    "slug": "mehndi",
+    "description": "Beautiful Mehndi ceremony decoration setups",
+    "image": "/categories/mehndi.png"
+  },
+  {
+    "id": 5,
+    "name": "Weaning Ceremony",
+    "slug": "weaning-ceremony",
+    "description": "Adorable decorations for Pasni/Annaprashan celebrations",
+    "image": "/categories/weaning.png"
+  },
+  {
+    "id": 6,
+    "name": "Bartaman",
+    "slug": "bartaman",
+    "description": "Sacred thread ceremony decoration arrangements",
+    "image": "/categories/bartabanda.png"
+  },
+  {
+    "id": 7,
+    "name": "Gunyo Cholo",
+    "slug": "gunyo-cholo",
+    "description": "Traditional coming-of-age ceremony decorations",
+    "image": "/categories/gunyocholo.png"
+  }
+]

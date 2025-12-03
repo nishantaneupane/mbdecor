@@ -1,0 +1,972 @@
+[
+  {
+    "id": 1,
+    "category": "wedding",
+    "name": "Elegant Flower Arch",
+    "slug": "elegant-flower-arch",
+    "image": "/placeholder-product.svg",
+    "description": "A stunning floral arch perfect for wedding ceremonies and photo backdrops.",
+    "specs": [
+      "Height: 2.5m",
+      "Width: 2m",
+      "Material: Metal frame with fresh flowers",
+      "Setup time: 2 hours"
+    ]
+  },
+  {
+    "id": 2,
+    "category": "wedding",
+    "name": "Crystal Chandelier",
+    "slug": "crystal-chandelier",
+    "image": "/placeholder-product.svg",
+    "description": "Luxurious crystal chandelier that adds elegance to any venue.",
+    "specs": [
+      "Height: 1.5m",
+      "Diameter: 80cm",
+      "Material: Crystal and metal",
+      "Includes LED lighting"
+    ]
+  },
+  {
+    "id": 3,
+    "category": "wedding",
+    "name": "Mandap Decoration Set",
+    "slug": "mandap-decoration-set",
+    "image": "/placeholder-product.svg",
+    "description": "Complete mandap decoration with flowers, drapes, and traditional elements.",
+    "specs": [
+      "Size: 4m x 4m",
+      "Includes pillars and canopy",
+      "Fresh flowers",
+      "Traditional design"
+    ]
+  },
+  {
+    "id": 4,
+    "category": "wedding",
+    "name": "Reception Stage Backdrop",
+    "slug": "reception-stage-backdrop",
+    "image": "/placeholder-product.svg",
+    "description": "Stunning stage backdrop for wedding reception with elegant draping and lighting.",
+    "specs": [
+      "Height: 3m",
+      "Width: 6m",
+      "LED lighting included",
+      "Premium fabric drapes"
+    ]
+  },
+  {
+    "id": 5,
+    "category": "wedding",
+    "name": "Table Centerpiece Collection",
+    "slug": "table-centerpiece-collection",
+    "image": "/placeholder-product.svg",
+    "description": "Beautiful floral centerpieces to adorn your reception tables.",
+    "specs": [
+      "Set of 10 pieces",
+      "Height: 40cm",
+      "Fresh or artificial flowers",
+      "Custom colors available"
+    ]
+  },
+  {
+    "id": 6,
+    "category": "wedding",
+    "name": "Wedding Aisle Runner",
+    "slug": "wedding-aisle-runner",
+    "image": "/placeholder-product.svg",
+    "description": "Elegant aisle runner with floral petals and decorative elements.",
+    "specs": [
+      "Length: 15m",
+      "Width: 1m",
+      "Includes side decorations",
+      "Multiple color options"
+    ]
+  },
+  {
+    "id": 7,
+    "category": "wedding",
+    "name": "Bridal Entry Decoration",
+    "slug": "bridal-entry-decoration",
+    "image": "/placeholder-product.svg",
+    "description": "Grand entrance decoration with flowers, lights, and traditional elements.",
+    "specs": [
+      "Height: 2.8m",
+      "Width: 3m",
+      "Includes lighting",
+      "Fresh flower garlands"
+    ]
+  },
+  {
+    "id": 8,
+    "category": "wedding",
+    "name": "Photobooth Setup",
+    "slug": "photobooth-setup",
+    "image": "/placeholder-product.svg",
+    "description": "Instagram-worthy photobooth with customizable backdrop and props.",
+    "specs": [
+      "Size: 2.5m x 3m",
+      "Includes props",
+      "Custom backdrop design",
+      "Lighting included"
+    ]
+  },
+  {
+    "id": 9,
+    "category": "wedding",
+    "name": "Wedding Stage Flowers",
+    "slug": "wedding-stage-flowers",
+    "image": "/placeholder-product.svg",
+    "description": "Premium floral arrangements for wedding stage decoration.",
+    "specs": [
+      "Multiple arrangements",
+      "Fresh flowers",
+      "Seasonal varieties",
+      "Color coordinated"
+    ]
+  },
+  {
+    "id": 10,
+    "category": "wedding",
+    "name": "Fairy Light Canopy",
+    "slug": "fairy-light-canopy",
+    "image": "/placeholder-product.svg",
+    "description": "Magical fairy light canopy creating a dreamy wedding atmosphere.",
+    "specs": [
+      "Coverage: 50 sqm",
+      "LED fairy lights",
+      "Warm white color",
+      "Professional installation"
+    ]
+  },
+  {
+    "id": 11,
+    "category": "birthday",
+    "name": "Balloon Arch Kit",
+    "slug": "balloon-arch-kit",
+    "image": "/placeholder-product.svg",
+    "description": "Colorful balloon arch perfect for birthday celebrations.",
+    "specs": [
+      "Height: 2m",
+      "Width: 3m",
+      "100+ balloons included",
+      "Easy assembly"
+    ]
+  },
+  {
+    "id": 12,
+    "category": "birthday",
+    "name": "Party Banner Set",
+    "slug": "party-banner-set",
+    "image": "/placeholder-product.svg",
+    "description": "Vibrant banners and garlands to brighten up any party space.",
+    "specs": [
+      "Length: 5m total",
+      "Customizable text",
+      "Reusable material",
+      "Multiple color options"
+    ]
+  },
+  {
+    "id": 13,
+    "category": "birthday",
+    "name": "Themed Decoration Package",
+    "slug": "themed-decoration-package",
+    "image": "/placeholder-product.svg",
+    "description": "Complete themed decoration set for memorable birthday parties.",
+    "specs": [
+      "Multiple themes available",
+      "Includes balloons, banners, and props",
+      "Age-appropriate designs",
+      "Customizable"
+    ]
+  },
+  {
+    "id": 14,
+    "category": "birthday",
+    "name": "Birthday Backdrop Stand",
+    "slug": "birthday-backdrop-stand",
+    "image": "/placeholder-product.svg",
+    "description": "Customizable backdrop perfect for birthday photos and memories.",
+    "specs": [
+      "Height: 2.5m",
+      "Width: 2m",
+      "Personalized design",
+      "Sturdy frame included"
+    ]
+  },
+  {
+    "id": 15,
+    "category": "birthday",
+    "name": "Cake Table Decoration",
+    "slug": "cake-table-decoration",
+    "image": "/placeholder-product.svg",
+    "description": "Beautiful cake table setup with themed decorations and props.",
+    "specs": [
+      "Table draping",
+      "Balloon arrangements",
+      "Themed props",
+      "Complete setup"
+    ]
+  },
+  {
+    "id": 16,
+    "category": "birthday",
+    "name": "Birthday Number Balloons",
+    "slug": "birthday-number-balloons",
+    "image": "/placeholder-product.svg",
+    "description": "Giant number balloons to showcase the special age.",
+    "specs": [
+      "Height: 1m",
+      "Metallic finish",
+      "Multiple colors",
+      "Helium or air fillable"
+    ]
+  },
+  {
+    "id": 17,
+    "category": "birthday",
+    "name": "Party Streamer Set",
+    "slug": "party-streamer-set",
+    "image": "/placeholder-product.svg",
+    "description": "Colorful streamers and ribbons to add festive flair.",
+    "specs": ["50+ pieces", "Multiple colors", "Easy to hang", "Reusable"]
+  },
+  {
+    "id": 18,
+    "category": "birthday",
+    "name": "Character Theme Props",
+    "slug": "character-theme-props",
+    "image": "/placeholder-product.svg",
+    "description": "Popular character-themed decorations and props for kids' parties.",
+    "specs": [
+      "Licensed characters",
+      "Includes cutouts and props",
+      "Photo-friendly",
+      "Multiple themes"
+    ]
+  },
+  {
+    "id": 19,
+    "category": "birthday",
+    "name": "LED Letter Lights",
+    "slug": "led-letter-lights",
+    "image": "/placeholder-product.svg",
+    "description": "Illuminated letters spelling birthday messages or names.",
+    "specs": [
+      "Height: 50cm per letter",
+      "LED lights",
+      "Battery operated",
+      "Customizable text"
+    ]
+  },
+  {
+    "id": 20,
+    "category": "birthday",
+    "name": "Party Table Setting Kit",
+    "slug": "party-table-setting-kit",
+    "image": "/placeholder-product.svg",
+    "description": "Complete table decoration set with plates, cups, and centerpieces.",
+    "specs": [
+      "Service for 20 guests",
+      "Themed design",
+      "Disposable items",
+      "Includes centerpieces"
+    ]
+  },
+  {
+    "id": 21,
+    "category": "haldi",
+    "name": "Traditional Haldi Setup",
+    "slug": "traditional-haldi-setup",
+    "image": "/placeholder-product.svg",
+    "description": "Vibrant yellow and orange themed decoration for Haldi ceremony.",
+    "specs": [
+      "Marigold flowers",
+      "Traditional seating",
+      "Decorative pots",
+      "Yellow drapes"
+    ]
+  },
+  {
+    "id": 22,
+    "category": "haldi",
+    "name": "Floral Haldi Backdrop",
+    "slug": "floral-haldi-backdrop",
+    "image": "/placeholder-product.svg",
+    "description": "Beautiful marigold and rose backdrop for photo sessions.",
+    "specs": ["Height: 2.5m", "Width: 3m", "Fresh flowers", "Includes seating"]
+  },
+  {
+    "id": 23,
+    "category": "haldi",
+    "name": "Marigold Garland Decoration",
+    "slug": "marigold-garland-decoration",
+    "image": "/placeholder-product.svg",
+    "description": "Fresh marigold garlands for traditional Haldi ceremony decoration.",
+    "specs": [
+      "Multiple garlands",
+      "Fresh marigolds",
+      "Traditional style",
+      "Custom lengths"
+    ]
+  },
+  {
+    "id": 24,
+    "category": "haldi",
+    "name": "Yellow Umbrella Decoration",
+    "slug": "yellow-umbrella-decoration",
+    "image": "/placeholder-product.svg",
+    "description": "Colorful hanging umbrellas creating a festive Haldi atmosphere.",
+    "specs": [
+      "Set of 10 umbrellas",
+      "Bright colors",
+      "Hanging setup",
+      "Weather resistant"
+    ]
+  },
+  {
+    "id": 25,
+    "category": "haldi",
+    "name": "Haldi Seating Arrangement",
+    "slug": "haldi-seating-arrangement",
+    "image": "/placeholder-product.svg",
+    "description": "Traditional low seating with cushions and floral decorations.",
+    "specs": [
+      "Comfortable cushions",
+      "Floral decorations",
+      "Traditional setup",
+      "Accommodates 20+ guests"
+    ]
+  },
+  {
+    "id": 26,
+    "category": "haldi",
+    "name": "Decorative Pots with Flowers",
+    "slug": "decorative-pots-with-flowers",
+    "image": "/placeholder-product.svg",
+    "description": "Beautiful brass and clay pots filled with marigolds and roses.",
+    "specs": [
+      "Set of 8 pots",
+      "Traditional design",
+      "Fresh flowers",
+      "Various sizes"
+    ]
+  },
+  {
+    "id": 27,
+    "category": "haldi",
+    "name": "Haldi Stage Platform",
+    "slug": "haldi-stage-platform",
+    "image": "/placeholder-product.svg",
+    "description": "Decorated platform for the bride and groom during Haldi ceremony.",
+    "specs": [
+      "Size: 2m x 2m",
+      "Includes cushions",
+      "Floral decorations",
+      "Traditional setup"
+    ]
+  },
+  {
+    "id": 28,
+    "category": "haldi",
+    "name": "Hanging Flower Strings",
+    "slug": "hanging-flower-strings",
+    "image": "/placeholder-product.svg",
+    "description": "Vertical hanging strings of fresh flowers creating a beautiful ambiance.",
+    "specs": [
+      "Length: 3m",
+      "Fresh flowers",
+      "Multiple strings",
+      "Easy installation"
+    ]
+  },
+  {
+    "id": 29,
+    "category": "haldi",
+    "name": "Yellow Drape Canopy",
+    "slug": "yellow-drape-canopy",
+    "image": "/placeholder-product.svg",
+    "description": "Elegant yellow fabric canopy for outdoor Haldi ceremonies.",
+    "specs": [
+      "Coverage: 30 sqm",
+      "Premium fabric",
+      "Includes frame",
+      "Weather resistant"
+    ]
+  },
+  {
+    "id": 30,
+    "category": "haldi",
+    "name": "Traditional Kalash Decoration",
+    "slug": "traditional-kalash-decoration",
+    "image": "/placeholder-product.svg",
+    "description": "Decorated kalash with coconut, mango leaves, and flowers.",
+    "specs": [
+      "Set of 4 kalash",
+      "Traditional elements",
+      "Fresh decorations",
+      "Auspicious setup"
+    ]
+  },
+  {
+    "id": 31,
+    "category": "mehndi",
+    "name": "Mehndi Stage Decoration",
+    "slug": "mehndi-stage-decoration",
+    "image": "/placeholder-product.svg",
+    "description": "Colorful and traditional Mehndi ceremony stage setup.",
+    "specs": [
+      "Includes seating cushions",
+      "Traditional props",
+      "Colorful drapes",
+      "Photo backdrop"
+    ]
+  },
+  {
+    "id": 32,
+    "category": "mehndi",
+    "name": "Hanging Decor Elements",
+    "slug": "hanging-decor-elements",
+    "image": "/placeholder-product.svg",
+    "description": "Stunning hanging decorations with umbrellas, flowers, and lanterns.",
+    "specs": [
+      "Multiple elements",
+      "Colorful design",
+      "Easy installation",
+      "Traditional look"
+    ]
+  },
+  {
+    "id": 33,
+    "category": "mehndi",
+    "name": "Colorful Cushion Seating",
+    "slug": "colorful-cushion-seating",
+    "image": "/placeholder-product.svg",
+    "description": "Comfortable floor seating with vibrant cushions and bolsters.",
+    "specs": [
+      "Set for 30 guests",
+      "Colorful designs",
+      "Traditional patterns",
+      "Comfortable padding"
+    ]
+  },
+  {
+    "id": 34,
+    "category": "mehndi",
+    "name": "Mehandi Jhula Decoration",
+    "slug": "mehandi-jhula-decoration",
+    "image": "/placeholder-product.svg",
+    "description": "Beautifully decorated swing for the bride with flowers and drapes.",
+    "specs": [
+      "Sturdy frame",
+      "Floral decorations",
+      "Colorful drapes",
+      "Safe and comfortable"
+    ]
+  },
+  {
+    "id": 35,
+    "category": "mehndi",
+    "name": "Rajasthani Umbrella Decor",
+    "slug": "rajasthani-umbrella-decor",
+    "image": "/placeholder-product.svg",
+    "description": "Colorful Rajasthani umbrellas with mirror work and embroidery.",
+    "specs": [
+      "Set of 15 umbrellas",
+      "Handcrafted designs",
+      "Multiple colors",
+      "Hanging or standing"
+    ]
+  },
+  {
+    "id": 36,
+    "category": "mehndi",
+    "name": "Photobooth with Props",
+    "slug": "mehndi-photobooth-props",
+    "image": "/placeholder-product.svg",
+    "description": "Mehndi-themed photobooth with colorful backdrop and fun props.",
+    "specs": [
+      "Size: 2.5m x 2m",
+      "Traditional props",
+      "Colorful backdrop",
+      "Photo-ready"
+    ]
+  },
+  {
+    "id": 37,
+    "category": "mehndi",
+    "name": "Mehandi Thali Decoration",
+    "slug": "mehandi-thali-decoration",
+    "image": "/placeholder-product.svg",
+    "description": "Beautifully decorated trays for presenting mehandi to guests.",
+    "specs": [
+      "Set of 5 thalis",
+      "Traditional decoration",
+      "Includes diyas",
+      "Flower arrangements"
+    ]
+  },
+  {
+    "id": 38,
+    "category": "mehndi",
+    "name": "Colorful Lantern Display",
+    "slug": "colorful-lantern-display",
+    "image": "/placeholder-product.svg",
+    "description": "Hanging colorful lanterns creating a magical evening ambiance.",
+    "specs": [
+      "Set of 20 lanterns",
+      "LED lights",
+      "Multiple colors",
+      "Easy hanging system"
+    ]
+  },
+  {
+    "id": 39,
+    "category": "mehndi",
+    "name": "Marigold Flower Curtains",
+    "slug": "marigold-flower-curtains",
+    "image": "/placeholder-product.svg",
+    "description": "Beautiful curtains made entirely of fresh marigold flowers.",
+    "specs": [
+      "Height: 3m",
+      "Fresh flowers",
+      "Multiple panels",
+      "Vibrant colors"
+    ]
+  },
+  {
+    "id": 40,
+    "category": "mehndi",
+    "name": "Traditional Floor Art",
+    "slug": "traditional-floor-art",
+    "image": "/placeholder-product.svg",
+    "description": "Beautiful rangoli and floor designs for Mehndi ceremony.",
+    "specs": [
+      "Custom designs",
+      "Multiple colors",
+      "Traditional patterns",
+      "Professional artist"
+    ]
+  },
+  {
+    "id": 41,
+    "category": "weaning-ceremony",
+    "name": "Pasni Decoration Set",
+    "slug": "pasni-decoration-set",
+    "image": "/placeholder-product.svg",
+    "description": "Adorable decoration setup for baby's first rice feeding ceremony.",
+    "specs": [
+      "Baby-friendly colors",
+      "Includes seating",
+      "Traditional elements",
+      "Photo props"
+    ]
+  },
+  {
+    "id": 42,
+    "category": "weaning-ceremony",
+    "name": "Baby Theme Backdrop",
+    "slug": "baby-theme-backdrop",
+    "image": "/placeholder-product.svg",
+    "description": "Cute and colorful backdrop for Annaprashan ceremony photos.",
+    "specs": [
+      "Height: 2m",
+      "Width: 2.5m",
+      "Soft pastel colors",
+      "Baby-safe materials"
+    ]
+  },
+  {
+    "id": 43,
+    "category": "weaning-ceremony",
+    "name": "Baby Seating Arrangement",
+    "slug": "baby-seating-arrangement",
+    "image": "/placeholder-product.svg",
+    "description": "Safe and comfortable seating setup for the baby during ceremony.",
+    "specs": [
+      "Baby-safe materials",
+      "Soft cushioning",
+      "Decorative elements",
+      "Easy to clean"
+    ]
+  },
+  {
+    "id": 44,
+    "category": "weaning-ceremony",
+    "name": "Balloon Decoration Set",
+    "slug": "weaning-balloon-decoration",
+    "image": "/placeholder-product.svg",
+    "description": "Cute balloon arrangements in baby-friendly colors and designs.",
+    "specs": [
+      "50+ balloons",
+      "Pastel colors",
+      "Baby-themed shapes",
+      "Helium included"
+    ]
+  },
+  {
+    "id": 45,
+    "category": "weaning-ceremony",
+    "name": "Table Display Setup",
+    "slug": "pasni-table-display",
+    "image": "/placeholder-product.svg",
+    "description": "Decorated table for displaying food items and ceremonial objects.",
+    "specs": [
+      "Table draping",
+      "Decorative elements",
+      "Traditional setup",
+      "Photo-ready"
+    ]
+  },
+  {
+    "id": 46,
+    "category": "weaning-ceremony",
+    "name": "Name Banner Design",
+    "slug": "baby-name-banner",
+    "image": "/placeholder-product.svg",
+    "description": "Personalized banner with baby's name and decorative elements.",
+    "specs": [
+      "Custom name design",
+      "Colorful graphics",
+      "Reusable material",
+      "Multiple sizes"
+    ]
+  },
+  {
+    "id": 47,
+    "category": "weaning-ceremony",
+    "name": "Ceiling Decoration",
+    "slug": "pasni-ceiling-decoration",
+    "image": "/placeholder-product.svg",
+    "description": "Hanging decorations with clouds, stars, and baby-themed elements.",
+    "specs": [
+      "Coverage area: 20 sqm",
+      "Soft colors",
+      "Baby-safe materials",
+      "Easy installation"
+    ]
+  },
+  {
+    "id": 48,
+    "category": "weaning-ceremony",
+    "name": "Photo Corner Setup",
+    "slug": "baby-photo-corner",
+    "image": "/placeholder-product.svg",
+    "description": "Dedicated photo corner with baby-themed props and backdrop.",
+    "specs": [
+      "Size: 2m x 2m",
+      "Includes props",
+      "Baby-safe materials",
+      "Cute decorations"
+    ]
+  },
+  {
+    "id": 49,
+    "category": "weaning-ceremony",
+    "name": "Floral Centerpieces",
+    "slug": "pasni-centerpieces",
+    "image": "/placeholder-product.svg",
+    "description": "Delicate floral arrangements in soft colors for table decorations.",
+    "specs": [
+      "Set of 8 pieces",
+      "Fresh or silk flowers",
+      "Pastel colors",
+      "Baby-friendly"
+    ]
+  },
+  {
+    "id": 50,
+    "category": "weaning-ceremony",
+    "name": "Traditional Thali Set",
+    "slug": "pasni-thali-decoration",
+    "image": "/placeholder-product.svg",
+    "description": "Decorated thalis for presenting food items during the ceremony.",
+    "specs": [
+      "Set of 3 thalis",
+      "Traditional decoration",
+      "Includes all elements",
+      "Photo-ready"
+    ]
+  },
+  {
+    "id": 51,
+    "category": "bartaman",
+    "name": "Traditional Bartaman Setup",
+    "slug": "traditional-bartaman-setup",
+    "image": "/placeholder-product.svg",
+    "description": "Sacred thread ceremony decoration with traditional elements.",
+    "specs": [
+      "Traditional seating",
+      "Religious decorations",
+      "Flower arrangements",
+      "Auspicious colors"
+    ]
+  },
+  {
+    "id": 52,
+    "category": "bartaman",
+    "name": "Pooja Mandap Decoration",
+    "slug": "pooja-mandap-decoration",
+    "image": "/placeholder-product.svg",
+    "description": "Beautiful mandap setup for the sacred ceremony rituals.",
+    "specs": [
+      "Traditional design",
+      "Includes all elements",
+      "Fresh flowers",
+      "Religious symbols"
+    ]
+  },
+  {
+    "id": 53,
+    "category": "bartaman",
+    "name": "Sacred Fire Setup",
+    "slug": "sacred-fire-setup",
+    "image": "/placeholder-product.svg",
+    "description": "Complete hawan kund setup with decorative elements and safety measures.",
+    "specs": [
+      "Traditional hawan kund",
+      "Decorative border",
+      "Safety arrangements",
+      "All accessories"
+    ]
+  },
+  {
+    "id": 54,
+    "category": "bartaman",
+    "name": "Vedic Backdrop",
+    "slug": "vedic-backdrop",
+    "image": "/placeholder-product.svg",
+    "description": "Traditional backdrop with vedic symbols and sacred elements.",
+    "specs": [
+      "Height: 2.5m",
+      "Width: 3m",
+      "Traditional motifs",
+      "Auspicious colors"
+    ]
+  },
+  {
+    "id": 55,
+    "category": "bartaman",
+    "name": "Priest Seating Area",
+    "slug": "priest-seating-area",
+    "image": "/placeholder-product.svg",
+    "description": "Decorated seating area for priests conducting the ceremony.",
+    "specs": [
+      "Traditional seating",
+      "Comfortable cushions",
+      "Decorative elements",
+      "Sacred symbols"
+    ]
+  },
+  {
+    "id": 56,
+    "category": "bartaman",
+    "name": "Flower Rangoli Design",
+    "slug": "bartaman-flower-rangoli",
+    "image": "/placeholder-product.svg",
+    "description": "Beautiful flower rangoli with traditional patterns and colors.",
+    "specs": [
+      "Custom designs",
+      "Fresh flowers",
+      "Traditional patterns",
+      "Sacred symbols"
+    ]
+  },
+  {
+    "id": 57,
+    "category": "bartaman",
+    "name": "Kalash with Decoration",
+    "slug": "bartaman-kalash-setup",
+    "image": "/placeholder-product.svg",
+    "description": "Sacred kalash decorated with traditional elements for the ceremony.",
+    "specs": [
+      "Multiple kalash",
+      "Traditional decoration",
+      "Fresh elements",
+      "Complete setup"
+    ]
+  },
+  {
+    "id": 58,
+    "category": "bartaman",
+    "name": "Entry Gate Decoration",
+    "slug": "bartaman-entry-gate",
+    "image": "/placeholder-product.svg",
+    "description": "Traditional welcome gate with flowers and auspicious symbols.",
+    "specs": [
+      "Height: 2.5m",
+      "Width: 2m",
+      "Fresh flowers",
+      "Traditional design"
+    ]
+  },
+  {
+    "id": 59,
+    "category": "bartaman",
+    "name": "Religious Symbol Display",
+    "slug": "religious-symbol-display",
+    "image": "/placeholder-product.svg",
+    "description": "Decorative display of sacred symbols and religious elements.",
+    "specs": [
+      "Multiple symbols",
+      "Traditional design",
+      "Premium materials",
+      "Respectful presentation"
+    ]
+  },
+  {
+    "id": 60,
+    "category": "bartaman",
+    "name": "Guest Seating Arrangement",
+    "slug": "bartaman-guest-seating",
+    "image": "/placeholder-product.svg",
+    "description": "Traditional seating arrangement for guests attending the ceremony.",
+    "specs": [
+      "Accommodates 50+ guests",
+      "Comfortable seating",
+      "Traditional style",
+      "Decorative elements"
+    ]
+  },
+  {
+    "id": 61,
+    "category": "gunyo-cholo",
+    "name": "Gunyo Cholo Ceremony Decor",
+    "slug": "gunyo-cholo-ceremony-decor",
+    "image": "/placeholder-product.svg",
+    "description": "Traditional decoration for this important coming-of-age ceremony.",
+    "specs": [
+      "Red and auspicious colors",
+      "Traditional elements",
+      "Seating arrangement",
+      "Photo backdrop"
+    ]
+  },
+  {
+    "id": 62,
+    "category": "gunyo-cholo",
+    "name": "Traditional Stage Setup",
+    "slug": "gunyo-cholo-stage-setup",
+    "image": "/placeholder-product.svg",
+    "description": "Complete stage decoration for the ceremonial proceedings.",
+    "specs": [
+      "Traditional design",
+      "Includes seating",
+      "Flower decorations",
+      "Auspicious colors"
+    ]
+  },
+  {
+    "id": 63,
+    "category": "gunyo-cholo",
+    "name": "Red Drape Decoration",
+    "slug": "red-drape-decoration",
+    "image": "/placeholder-product.svg",
+    "description": "Elegant red fabric draping with traditional patterns and gold accents.",
+    "specs": [
+      "Premium fabric",
+      "Traditional patterns",
+      "Gold embellishments",
+      "Complete coverage"
+    ]
+  },
+  {
+    "id": 64,
+    "category": "gunyo-cholo",
+    "name": "Ceremonial Seating Platform",
+    "slug": "ceremonial-seating-platform",
+    "image": "/placeholder-product.svg",
+    "description": "Decorated platform for the girl during the ceremony rituals.",
+    "specs": [
+      "Size: 1.5m x 1.5m",
+      "Traditional cushions",
+      "Floral decorations",
+      "Comfortable height"
+    ]
+  },
+  {
+    "id": 65,
+    "category": "gunyo-cholo",
+    "name": "Pooja Thali Set",
+    "slug": "gunyo-cholo-pooja-thali",
+    "image": "/placeholder-product.svg",
+    "description": "Beautifully decorated thalis for ceremonial offerings.",
+    "specs": [
+      "Set of 5 thalis",
+      "Traditional decoration",
+      "All accessories",
+      "Premium finish"
+    ]
+  },
+  {
+    "id": 66,
+    "category": "gunyo-cholo",
+    "name": "Floral Backdrop Design",
+    "slug": "gunyo-cholo-floral-backdrop",
+    "image": "/placeholder-product.svg",
+    "description": "Beautiful floral backdrop in auspicious colors for photos.",
+    "specs": [
+      "Height: 2.5m",
+      "Width: 3m",
+      "Fresh flowers",
+      "Traditional arrangement"
+    ]
+  },
+  {
+    "id": 67,
+    "category": "gunyo-cholo",
+    "name": "Traditional Welcome Gate",
+    "slug": "gunyo-cholo-welcome-gate",
+    "image": "/placeholder-product.svg",
+    "description": "Decorated entrance gate with traditional elements and flowers.",
+    "specs": [
+      "Height: 2.5m",
+      "Traditional design",
+      "Fresh flowers",
+      "Auspicious symbols"
+    ]
+  },
+  {
+    "id": 68,
+    "category": "gunyo-cholo",
+    "name": "Mandap Decoration",
+    "slug": "gunyo-cholo-mandap",
+    "image": "/placeholder-product.svg",
+    "description": "Traditional mandap setup for performing the ceremony rituals.",
+    "specs": [
+      "Size: 3m x 3m",
+      "Traditional design",
+      "Complete setup",
+      "Floral decorations"
+    ]
+  },
+  {
+    "id": 69,
+    "category": "gunyo-cholo",
+    "name": "Ceiling Flower Decoration",
+    "slug": "gunyo-cholo-ceiling-flowers",
+    "image": "/placeholder-product.svg",
+    "description": "Hanging flower arrangements creating a beautiful overhead display.",
+    "specs": [
+      "Coverage: 30 sqm",
+      "Fresh flowers",
+      "Traditional style",
+      "Professional installation"
+    ]
+  },
+  {
+    "id": 70,
+    "category": "gunyo-cholo",
+    "name": "Photo Corner Setup",
+    "slug": "gunyo-cholo-photo-corner",
+    "image": "/placeholder-product.svg",
+    "description": "Dedicated photo corner with traditional elements and props.",
+    "specs": [
+      "Size: 2m x 2.5m",
+      "Traditional props",
+      "Decorative backdrop",
+      "Photo-ready setup"
+    ]
+  }
+]
