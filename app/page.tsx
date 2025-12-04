@@ -4,6 +4,8 @@ import {
   getTrendingProducts,
   getBestSellers,
   getNewArrivals,
+  getPromoBanners,
+  getBanquetSection,
 } from "@/lib/data";
 import CategoryCard from "@/components/CategoryCard";
 import ProductCard from "@/components/ProductCard";
@@ -18,6 +20,8 @@ export default async function Home() {
   const trendingProducts = await getTrendingProducts(4);
   const bestSellers = await getBestSellers(4);
   const newArrivals = await getNewArrivals(4);
+  const promoBanners = await getPromoBanners();
+  const banquetSection = await getBanquetSection();
 
   return (
     <>
@@ -28,135 +32,95 @@ export default async function Home() {
       <BannerCarousel />
 
       {/* Promotional Banners Section */}
-      <section className="py-8 bg-gray-50">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <PromoBanner
-              title="Wedding Celebrations"
-              subtitle="Create magical moments with our exclusive wedding decoration collection"
-              image="/banner/4.jpg"
-              link="/categories/wedding"
-              imagePosition="left"
-            />
-            <PromoBanner
-              title="Birthday Parties"
-              subtitle="Make every birthday unforgettable with our vibrant party decor"
-              image="/banner/5.jpg"
-              link="/categories/birthday"
-              imagePosition="right"
-            />
+      {promoBanners.length > 0 && (
+        <section className="py-8 bg-gray-50">
+          <div className="container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {promoBanners.map((banner, index) => (
+                <PromoBanner
+                  key={banner.id}
+                  title={banner.title}
+                  subtitle={banner.subtitle}
+                  image={banner.image}
+                  link={banner.link}
+                  imagePosition={index % 2 === 0 ? "left" : "right"}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Banquet Hall Section */}
-      <section className="py-16 bg-linear-to-r from-primary/10 to-primary/5">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Content */}
-            <div>
-              <span className="inline-block px-4 py-1 bg-primary text-white text-sm font-semibold rounded-full mb-4">
-                ✨ BANQUET SERVICES
-              </span>
-              <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-                Transform Your Banquet Hall
-              </h2>
-              <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                Professional decoration services for banquet halls and event
-                venues. From elegant ceiling drapes to stunning stage setups, we
-                create the perfect ambiance for your special occasions.
-              </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center text-gray-700">
-                  <svg
-                    className="w-5 h-5 text-primary mr-3"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  Complete hall decoration packages
-                </li>
-                <li className="flex items-center text-gray-700">
-                  <svg
-                    className="w-5 h-5 text-primary mr-3"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  Stage and lighting arrangements
-                </li>
-                <li className="flex items-center text-gray-700">
-                  <svg
-                    className="w-5 h-5 text-primary mr-3"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  Customizable themes and designs
-                </li>
-                <li className="flex items-center text-gray-700">
-                  <svg
-                    className="w-5 h-5 text-primary mr-3"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  Professional setup and installation
-                </li>
-              </ul>
-              <Link
-                href="/categories/banquet-hall"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
-              >
-                Explore Banquet Services
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+      {banquetSection && (
+        <section className="py-16 bg-linear-to-r from-primary/10 to-primary/5">
+          <div className="container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Content */}
+              <div>
+                {banquetSection.badge && (
+                  <span className="inline-block px-4 py-1 bg-primary text-white text-sm font-semibold rounded-full mb-4">
+                    {banquetSection.badge}
+                  </span>
+                )}
+                <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+                  {banquetSection.title}
+                </h2>
+                <p className="text-gray-700 text-lg leading-relaxed mb-8">
+                  {banquetSection.description}
+                </p>
+                <ul className="space-y-3 mb-8">
+                  {banquetSection.features.map((feature, index) => (
+                    <li key={index} className="flex items-center text-gray-700">
+                      <svg
+                        className="w-5 h-5 text-primary mr-3"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href={banquetSection.buttonLink}
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </Link>
-            </div>
+                  {banquetSection.buttonText}
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </Link>
+              </div>
 
-            {/* Image */}
-            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src="/banner/1.jpg"
-                alt="Banquet Hall Decoration"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent"></div>
+              {/* Image */}
+              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src={banquetSection.image}
+                  alt={banquetSection.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent"></div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Categories Section */}
       <section className="py-16">

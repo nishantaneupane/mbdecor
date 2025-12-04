@@ -1,4 +1,4 @@
-import { client } from './sanity.client'
+import { client } from "./sanity.client";
 
 // Category Queries
 export async function getAllCategories() {
@@ -11,7 +11,7 @@ export async function getAllCategories() {
       "image": image.asset->url,
       order
     }
-  `)
+  `);
 }
 
 export async function getCategoryBySlug(slug: string) {
@@ -27,7 +27,7 @@ export async function getCategoryBySlug(slug: string) {
     }
   `,
     { slug }
-  )
+  );
 }
 
 // Product Queries
@@ -47,7 +47,7 @@ export async function getAllProducts() {
       isNewArrival,
       order
     }
-  `)
+  `);
 }
 
 export async function getProductsByCategory(categorySlug: string) {
@@ -69,7 +69,7 @@ export async function getProductsByCategory(categorySlug: string) {
     }
   `,
     { slug: categorySlug }
-  )
+  );
 }
 
 export async function getProductBySlug(slug: string) {
@@ -91,7 +91,7 @@ export async function getProductBySlug(slug: string) {
     }
   `,
     { slug }
-  )
+  );
 }
 
 export async function getFeaturedProducts(limit: number = 8) {
@@ -110,7 +110,7 @@ export async function getFeaturedProducts(limit: number = 8) {
     }
   `,
     { limit }
-  )
+  );
 }
 
 export async function getTrendingProducts(limit: number = 8) {
@@ -129,7 +129,7 @@ export async function getTrendingProducts(limit: number = 8) {
     }
   `,
     { limit }
-  )
+  );
 }
 
 export async function getBestSellers(limit: number = 8) {
@@ -148,7 +148,7 @@ export async function getBestSellers(limit: number = 8) {
     }
   `,
     { limit }
-  )
+  );
 }
 
 export async function getNewArrivals(limit: number = 8) {
@@ -167,13 +167,13 @@ export async function getNewArrivals(limit: number = 8) {
     }
   `,
     { limit }
-  )
+  );
 }
 
 // Banner Queries
 export async function getActiveBanners() {
   return client.fetch(`
-    *[_type == "banner" && isActive == true] | order(order asc) {
+    *[_type == "banner" && isActive == true && placement == "hero"] | order(order asc) {
       "id": _id,
       title,
       subtitle,
@@ -181,5 +181,66 @@ export async function getActiveBanners() {
       link,
       order
     }
-  `)
+  `);
+}
+
+export async function getPromoBanners() {
+  return client.fetch(`
+    *[_type == "banner" && isActive == true && placement == "promo"] | order(order asc) {
+      "id": _id,
+      title,
+      subtitle,
+      "image": image.asset->url,
+      link,
+      order
+    }
+  `);
+}
+
+// Banquet Section Query
+export async function getBanquetSection() {
+  return client.fetch(`
+    *[_type == "banquetSection" && isActive == true][0] {
+      "id": _id,
+      badge,
+      title,
+      description,
+      features,
+      buttonText,
+      buttonLink,
+      "image": image.asset->url
+    }
+  `);
+}
+
+// Contact Info Query
+export async function getContactInfo() {
+  return client.fetch(`
+    *[_type == "contactInfo" && isActive == true][0] {
+      "id": _id,
+      pageTitle,
+      pageSubtitle,
+      sectionTitle,
+      sectionDescription,
+      address,
+      phone,
+      email,
+      businessHours,
+      formTitle
+    }
+  `);
+}
+
+// Social Links Query
+export async function getSocialLinks() {
+  return client.fetch(`
+    *[_type == "socialLinks" && isActive == true][0] {
+      "id": _id,
+      facebook,
+      instagram,
+      twitter,
+      youtube,
+      linkedin
+    }
+  `);
 }

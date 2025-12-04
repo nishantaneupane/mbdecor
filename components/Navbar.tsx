@@ -9,7 +9,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [categories, setCategories] = useState<any[]>([]);
-  const [categoryProducts, setCategoryProducts] = useState<Record<string, Product[]>>({});
+  const [categoryProducts, setCategoryProducts] = useState<
+    Record<string, Product[]>
+  >({});
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
@@ -18,10 +20,13 @@ export default function Navbar() {
 
   useEffect(() => {
     if (openDropdown && categories.length > 0) {
-      const categorySlug = openDropdown.replace('mobile-', '');
+      const categorySlug = openDropdown.replace("mobile-", "");
       if (!categoryProducts[categorySlug]) {
-        getProductsByCategory(categorySlug).then(products => {
-          setCategoryProducts(prev => ({ ...prev, [categorySlug]: products.slice(0, 5) }));
+        getProductsByCategory(categorySlug).then((products) => {
+          setCategoryProducts((prev) => ({
+            ...prev,
+            [categorySlug]: products.slice(0, 5),
+          }));
         });
       }
     }
@@ -58,21 +63,72 @@ export default function Navbar() {
               Home
             </Link>
 
-            {/* Banquet Link */}
-            <Link
-              href="/categories/banquet-hall"
-              className="text-white hover:text-white/80 transition-colors font-medium"
-            >
-              Banquet
-            </Link>
+            {/* Banquet - Always first */}
+            {categories
+              .filter((category) => category.slug === "banquet-hall")
+              .map((category) => (
+                <div
+                  key={category.id}
+                  className="relative"
+                  onMouseEnter={() => setOpenDropdown(category.slug)}
+                  onMouseLeave={() => setOpenDropdown(null)}
+                >
+                  <Link
+                    href={`/categories/${category.slug}`}
+                    className="text-white hover:text-white/80 transition-colors font-medium flex items-center gap-1 py-2"
+                  >
+                    Banquet
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </Link>
 
-            {/* Categories Dropdown */}
+                  {/* Dropdown with Products */}
+                  {openDropdown === category.slug && (
+                    <div className="absolute top-full left-0 pt-2 w-64">
+                      <div className="bg-white shadow-lg rounded-lg py-3">
+                        <div className="px-4 py-2 text-sm font-semibold text-foreground">
+                          Banquet Hall
+                        </div>
+                        {categoryProducts[category.slug]?.map((product) => (
+                          <Link
+                            key={product.id}
+                            href={`/products/${product.slug}`}
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-primary/5 hover:text-primary transition-colors"
+                          >
+                            {product.name}
+                          </Link>
+                        ))}
+                        <Link
+                          href={`/categories/${category.slug}`}
+                          className="block px-4 py-2 text-sm text-primary hover:bg-primary/5 transition-colors font-semibold mt-2"
+                        >
+                          View All →
+                        </Link>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+
+            {/* Short Categories - Display directly */}
             {categories
               .filter(
                 (category) =>
                   category.slug !== "weaning-ceremony" &&
                   category.slug !== "gunyo-cholo" &&
-                  category.slug !== "banquet-hall"
+                  category.slug !== "banquet-hall" &&
+                  category.name.length <= 8
               )
               .map((category) => (
                 <div
@@ -109,12 +165,13 @@ export default function Navbar() {
                           {category.name}
                         </div>
                         {categoryProducts[category.slug]?.map((product) => (
-                          <div
+                          <Link
                             key={product.id}
-                            className="px-4 py-2 text-sm text-gray-600"
+                            href={`/products/${product.slug}`}
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-primary/5 hover:text-primary transition-colors"
                           >
                             {product.name}
-                          </div>
+                          </Link>
                         ))}
                         <Link
                           href={`/categories/${category.slug}`}
@@ -127,6 +184,63 @@ export default function Navbar() {
                   )}
                 </div>
               ))}
+
+            {/* Long Categories - Dropdown */}
+            {categories.filter(
+              (category) =>
+                category.slug !== "weaning-ceremony" &&
+                category.slug !== "gunyo-cholo" &&
+                category.slug !== "banquet-hall" &&
+                category.name.length > 8
+            ).length > 0 && (
+              <div
+                className="relative"
+                onMouseEnter={() => setOpenDropdown("more-categories")}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
+                <button className="text-white hover:text-white/80 transition-colors font-medium flex items-center gap-1 py-2">
+                  More
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+
+                {/* Long Categories Dropdown */}
+                {openDropdown === "more-categories" && (
+                  <div className="absolute top-full left-0 pt-2 w-64">
+                    <div className="bg-white shadow-lg rounded-lg py-3 max-h-[500px] overflow-y-auto">
+                      {categories
+                        .filter(
+                          (category) =>
+                            category.slug !== "weaning-ceremony" &&
+                            category.slug !== "gunyo-cholo" &&
+                            category.slug !== "banquet-hall" &&
+                            category.name.length > 8
+                        )
+                        .map((category) => (
+                          <Link
+                            key={category.id}
+                            href={`/categories/${category.slug}`}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/5 hover:text-primary transition-colors"
+                          >
+                            {category.name}
+                          </Link>
+                        ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
 
             <Link
               href="/about"
@@ -226,8 +340,8 @@ export default function Navbar() {
                             onClick={() => setIsOpen(false)}
                           >
                             {product.name}
-                            </Link>
-                          ))}
+                          </Link>
+                        ))}
                         <Link
                           href={`/categories/${category.slug}`}
                           className="text-sm text-white hover:text-white/80 font-semibold"

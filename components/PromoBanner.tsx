@@ -3,7 +3,7 @@ import Link from "next/link";
 
 interface PromoBannerProps {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   image: string;
   link: string;
   imagePosition?: "left" | "right";
@@ -30,7 +30,7 @@ export default function PromoBanner({
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
             {title}
           </h3>
-          <p className="text-gray-600 mb-6">{subtitle}</p>
+          {subtitle && <p className="text-gray-600 mb-6">{subtitle}</p>}
           <span className="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
             Shop Now
             <svg

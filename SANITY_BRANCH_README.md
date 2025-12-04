@@ -13,11 +13,13 @@ This branch adds **dual data source support** to the MD Decor project, allowing 
 ## 🔧 Configuration
 
 ### Using JSON (Default)
+
 ```env
 DATA_SOURCE=json
 ```
 
 ### Using Sanity
+
 ```env
 DATA_SOURCE=sanity
 NEXT_PUBLIC_SANITY_PROJECT_ID=your-project-id
@@ -47,6 +49,7 @@ SANITY_API_TOKEN=your-token
 1. **Clone and install dependencies** (already done)
 
 2. **Use JSON data (default)**:
+
    ```bash
    npm run dev
    ```
@@ -76,6 +79,7 @@ export async function getAllCategories(): Promise<Category[]> {
 ## ✅ Testing
 
 Build successful with JSON data source:
+
 ```bash
 npm run build
 # ✓ Compiled successfully
@@ -84,6 +88,7 @@ npm run build
 ## 📚 Documentation
 
 See `SANITY_SETUP.md` for complete setup instructions including:
+
 - Sanity project creation
 - Schema definitions
 - Data migration
@@ -92,6 +97,7 @@ See `SANITY_SETUP.md` for complete setup instructions including:
 ## 🔀 Merging to Main
 
 This branch can be safely merged to main. It:
+
 - Maintains backward compatibility
 - Defaults to JSON data
 - Passes all builds

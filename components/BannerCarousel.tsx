@@ -3,11 +3,15 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import bannersData from "@/data/banners.json";
+import { getActiveBanners, Banner } from "@/lib/data";
 
 export default function BannerCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const banners = bannersData;
+  const [banners, setBanners] = useState<Banner[]>([]);
+
+  useEffect(() => {
+    getActiveBanners().then(setBanners);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -28,6 +32,14 @@ export default function BannerCarousel() {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + banners.length) % banners.length);
   };
+
+  if (banners.length === 0) {
+    return (
+      <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] bg-gray-100 flex items-center justify-center">
+        <p className="text-gray-500">Loading banners...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden bg-gray-100">

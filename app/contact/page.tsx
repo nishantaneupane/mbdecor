@@ -1,29 +1,21 @@
-"use client";
+import { getContactInfo } from "@/lib/data";
+import ContactForm from "@/components/ContactForm";
 
-import { useState } from "react";
+export default async function ContactPage() {
+  const contactInfo = await getContactInfo();
 
-export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Form is non-functional as per requirements
-    alert("Thank you for your interest! This is a demo form.");
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  // Fallback if no contact info
+  if (!contactInfo) {
+    return (
+      <div className="py-16">
+        <div className="container">
+          <p className="text-center text-gray-600">
+            Contact information is not available at the moment.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="py-16">
@@ -32,36 +24,34 @@ export default function ContactPage() {
           {/* Page Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Contact Us
+              {contactInfo.pageTitle}
             </h1>
-            <p className="text-gray-600 text-lg">
-              Get in touch with us for your decoration needs
-            </p>
+            {contactInfo.pageSubtitle && (
+              <p className="text-gray-600 text-lg">
+                {contactInfo.pageSubtitle}
+              </p>
+            )}
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-6">
-                Get In Touch
+                {contactInfo.sectionTitle}
               </h2>
-              <p className="text-gray-700 mb-8">
-                Have questions or ready to start planning your event? We'd love
-                to hear from you. Reach out to us through any of the following
-                methods.
-              </p>
+              {contactInfo.sectionDescription && (
+                <p className="text-gray-700 mb-8">
+                  {contactInfo.sectionDescription}
+                </p>
+              )}
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="text-2xl text-primary">📍</div>
                   <div>
                     <h3 className="font-semibold mb-1">Address</h3>
-                    <p className="text-gray-700">
-                      123 Decoration Street
-                      <br />
-                      City, State 12345
-                      <br />
-                      Country
+                    <p className="text-gray-700 whitespace-pre-line">
+                      {contactInfo.address}
                     </p>
                   </div>
                 </div>
@@ -70,7 +60,7 @@ export default function ContactPage() {
                   <div className="text-2xl text-primary">📞</div>
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
-                    <p className="text-gray-700">+1 (555) 123-4567</p>
+                    <p className="text-gray-700">{contactInfo.phone}</p>
                   </div>
                 </div>
 
@@ -78,7 +68,7 @@ export default function ContactPage() {
                   <div className="text-2xl text-primary">✉️</div>
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-gray-700">info@mbdecor.com</p>
+                    <p className="text-gray-700">{contactInfo.email}</p>
                   </div>
                 </div>
 
@@ -86,13 +76,11 @@ export default function ContactPage() {
                   <div className="text-2xl text-primary">🕒</div>
                   <div>
                     <h3 className="font-semibold mb-1">Business Hours</h3>
-                    <p className="text-gray-700">
-                      Monday - Friday: 9:00 AM - 6:00 PM
-                      <br />
-                      Saturday: 10:00 AM - 4:00 PM
-                      <br />
-                      Sunday: Closed
-                    </p>
+                    <div className="text-gray-700">
+                      {contactInfo.businessHours.map((hours, index) => (
+                        <p key={index}>{hours}</p>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -101,91 +89,9 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-6">
-                Send Us a Message
+                {contactInfo.formTitle}
               </h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Your Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                    placeholder="John Doe"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                    placeholder="john@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                    placeholder="+1 (555) 123-4567"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
-                    placeholder="Tell us about your event..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-                >
-                  Send Message
-                </button>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>
