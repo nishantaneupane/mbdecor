@@ -3,7 +3,7 @@ import { client } from "./sanity.client";
 // Category Queries
 export async function getAllCategories() {
   return client.fetch(`
-    *[_type == "category"] | order(order asc, name asc) {
+    *[_type == "category" && !(_id in path("drafts.**"))] | order(order asc, name asc) {
       "id": _id,
       name,
       "slug": slug.current,
@@ -17,7 +17,7 @@ export async function getAllCategories() {
 export async function getCategoryBySlug(slug: string) {
   return client.fetch(
     `
-    *[_type == "category" && slug.current == $slug][0] {
+    *[_type == "category" && slug.current == $slug && !(_id in path("drafts.**"))][0] {
       "id": _id,
       name,
       "slug": slug.current,
@@ -33,7 +33,7 @@ export async function getCategoryBySlug(slug: string) {
 // Product Queries
 export async function getAllProducts() {
   return client.fetch(`
-    *[_type == "product"] | order(order asc, _createdAt desc) {
+    *[_type == "product" && !(_id in path("drafts.**"))] | order(order asc, _createdAt desc) {
       "id": _id,
       name,
       "slug": slug.current,
@@ -54,7 +54,7 @@ export async function getAllProducts() {
 export async function getProductsByCategory(categorySlug: string) {
   return client.fetch(
     `
-    *[_type == "product" && category->slug.current == $slug] | order(order asc, _createdAt desc) {
+    *[_type == "product" && category->slug.current == $slug && !(_id in path("drafts.**"))] | order(order asc, _createdAt desc) {
       "id": _id,
       name,
       "slug": slug.current,
@@ -77,7 +77,7 @@ export async function getProductsByCategory(categorySlug: string) {
 export async function getProductBySlug(slug: string) {
   return client.fetch(
     `
-    *[_type == "product" && slug.current == $slug][0] {
+    *[_type == "product" && slug.current == $slug && !(_id in path("drafts.**"))][0] {
       "id": _id,
       name,
       "slug": slug.current,
@@ -100,7 +100,7 @@ export async function getProductBySlug(slug: string) {
 export async function getFeaturedProducts(limit: number = 8) {
   return client.fetch(
     `
-    *[_type == "product" && isFeatured == true] | order(order asc, _createdAt desc) [0...$limit] {
+    *[_type == "product" && isFeatured == true && !(_id in path("drafts.**"))] | order(order asc, _createdAt desc) [0...$limit] {
       "id": _id,
       name,
       "slug": slug.current,
@@ -119,7 +119,7 @@ export async function getFeaturedProducts(limit: number = 8) {
 export async function getTrendingProducts(limit: number = 8) {
   return client.fetch(
     `
-    *[_type == "product" && isTrending == true] | order(order asc, _createdAt desc) [0...$limit] {
+    *[_type == "product" && isTrending == true && !(_id in path("drafts.**"))] | order(order asc, _createdAt desc) [0...$limit] {
       "id": _id,
       name,
       "slug": slug.current,
@@ -138,7 +138,7 @@ export async function getTrendingProducts(limit: number = 8) {
 export async function getBestSellers(limit: number = 8) {
   return client.fetch(
     `
-    *[_type == "product" && isBestSeller == true] | order(order asc, _createdAt desc) [0...$limit] {
+    *[_type == "product" && isBestSeller == true && !(_id in path("drafts.**"))] | order(order asc, _createdAt desc) [0...$limit] {
       "id": _id,
       name,
       "slug": slug.current,
@@ -157,7 +157,7 @@ export async function getBestSellers(limit: number = 8) {
 export async function getNewArrivals(limit: number = 8) {
   return client.fetch(
     `
-    *[_type == "product" && isNewArrival == true] | order(order asc, _createdAt desc) [0...$limit] {
+    *[_type == "product" && isNewArrival == true && !(_id in path("drafts.**"))] | order(order asc, _createdAt desc) [0...$limit] {
       "id": _id,
       name,
       "slug": slug.current,
@@ -176,7 +176,7 @@ export async function getNewArrivals(limit: number = 8) {
 // Banner Queries
 export async function getActiveBanners() {
   return client.fetch(`
-    *[_type == "banner" && isActive == true && placement == "hero"] | order(order asc) {
+    *[_type == "banner" && isActive == true && placement == "hero" && !(_id in path("drafts.**"))] | order(order asc) {
       "id": _id,
       title,
       subtitle,
@@ -189,7 +189,7 @@ export async function getActiveBanners() {
 
 export async function getPromoBanners() {
   return client.fetch(`
-    *[_type == "banner" && isActive == true && placement == "promo"] | order(order asc) {
+    *[_type == "banner" && isActive == true && placement == "promo" && !(_id in path("drafts.**"))] | order(order asc) {
       "id": _id,
       title,
       subtitle,
@@ -203,7 +203,7 @@ export async function getPromoBanners() {
 // Banquet Section Query
 export async function getBanquetSection() {
   return client.fetch(`
-    *[_type == "banquetSection" && isActive == true][0] {
+    *[_type == "banquetSection" && isActive == true && !(_id in path("drafts.**"))][0] {
       "id": _id,
       badge,
       title,
@@ -219,7 +219,7 @@ export async function getBanquetSection() {
 // Contact Info Query
 export async function getContactInfo() {
   return client.fetch(`
-    *[_type == "contactInfo" && isActive == true][0] {
+    *[_type == "contactInfo" && isActive == true && !(_id in path("drafts.**"))][0] {
       "id": _id,
       pageTitle,
       pageSubtitle,
@@ -237,7 +237,7 @@ export async function getContactInfo() {
 // Social Links Query
 export async function getSocialLinks() {
   return client.fetch(`
-    *[_type == "socialLinks" && isActive == true][0] {
+    *[_type == "socialLinks" && isActive == true && !(_id in path("drafts.**"))][0] {
       "id": _id,
       facebook,
       instagram,

@@ -6,11 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "import:categories": "node scripts/import-categories.mjs"
   },
   "dependencies": {
     "@sanity/client": "^7.13.1",
     "@sanity/image-url": "^1.2.0",
+    "dotenv": "^17.2.3",
     "next": "^16.0.7",
     "next-sanity": "^11.6.10",
     "react": "19.2.0",

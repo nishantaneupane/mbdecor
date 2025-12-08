@@ -293,15 +293,6 @@ export default function Navbar() {
                 Home
               </Link>
 
-              {/* Banquet Link */}
-              <Link
-                href="/categories/banquet-hall"
-                className="text-white hover:text-white/80 transition-colors font-medium"
-                onClick={() => setIsOpen(false)}
-              >
-                Banquet
-              </Link>
-
               {/* Mobile Categories */}
               {categories
                 .filter((category) => category.slug !== "banquet-hall")
