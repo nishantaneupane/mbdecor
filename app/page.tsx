@@ -1,3 +1,5 @@
+export const revalidate = 60; // Revalidate homepage content every 60 seconds
+
 import {
   getAllCategories,
   getFeaturedProducts,

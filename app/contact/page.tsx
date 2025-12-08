@@ -1,3 +1,5 @@
+export const revalidate = 60; // Revalidate contact content every 60 seconds
+
 import { getContactInfo } from "@/lib/data";
 import ContactForm from "@/components/ContactForm";
 
