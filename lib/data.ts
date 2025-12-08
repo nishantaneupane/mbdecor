@@ -24,6 +24,7 @@ export interface Product {
   name: string;
   slug: string;
   image: string;
+  galleryImages?: string[];
   description: string;
   specs: string[];
 }

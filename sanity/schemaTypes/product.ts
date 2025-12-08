@@ -37,6 +37,20 @@ export default defineType({
       },
     },
     {
+      name: "galleryImages",
+      title: "Gallery Images",
+      type: "array",
+      of: [
+        {
+          type: "image",
+          options: {
+            hotspot: true,
+          },
+        },
+      ],
+      description: "Additional images for the product gallery",
+    },
+    {
       name: "description",
       title: "Description",
       type: "text",

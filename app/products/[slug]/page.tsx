@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 import {
   getProductBySlug,
@@ -7,6 +6,7 @@ import {
   getProductsByCategory,
 } from "@/lib/data";
 import ProductCard from "@/components/ProductCard";
+import ProductGallery from "@/components/ProductGallery";
 
 interface ProductPageProps {
   params: Promise<{ slug: string }>;
@@ -73,16 +73,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
         {/* Product Details */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Product Image */}
-          <div className="relative aspect-square bg-gray-200 rounded-lg overflow-hidden">
-            <Image
-              src={product.image}
-              alt={product.name}
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
+          {/* Product Gallery */}
+          <ProductGallery
+            name={product.name}
+            mainImage={product.image}
+            galleryImages={product.galleryImages}
+          />
 
           {/* Product Info */}
           <div>
